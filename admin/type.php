@@ -73,7 +73,7 @@ include 'php/checkuser.php';
                        "<input type='hidden' name='id' value='"
                        . $typeID . "' />" .
                        "<input type=submit name='deleteType' " .
-                       "value='Slet værelse!' class='cancel'/>" .
+                       "value='Slet type!' class='cancel'/>" .
                      "</td>" .
                      "<td>" .
                        "<input type='password' name='deletepassword' " .
