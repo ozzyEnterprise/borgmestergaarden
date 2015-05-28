@@ -1,5 +1,5 @@
 <?php
-include 'booking.php';
+include '../php/booking.php';
 if (isset($_POST['user']) && isset($_POST['password'])) {
     if (lookupUserPassword($_POST['user'], $_POST['password'])) {
         $_POST['secretkey'] = getSecretKey($_POST['user']);
