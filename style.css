@@ -16,7 +16,7 @@
  
 /* Headings */
 h2 {font-size: 1.571em} /* 22px */
-h3 {font-size: 1.429em} /* 20px */
+h3 {font-size: 1.429em; color: #2A476F;} /* 20px */
 h4 {font-size: 1.286em} /* 18px */
 h5 {font-size: 1.143em} /* 16px */
 h6 {font-size: 1em} /* 14px */
@@ -171,4 +171,30 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     float:center;
     padding:10px;
 	text-align:center;
+}
+/* Slider */
+div#captioned-gallery { width: 100%; overflow: hidden; padding-bottom: 1.0rem; }
+figure { margin: 0; }
+figure.slider {
+	position: relative; width: 500%;
+	font-size: 0; animation: 30s slidy infinite;
+}
+figure.slider figure {
+	width: 20%; height: auto;
+	display: inline-block;
+	position: inherit;
+}
+figure.slider img { width: 800px; height: auto; }
+figure.slider figure figcaption {
+position: absolute; bottom: 0;
+background: rgba(0,0,0,0.3);
+color: #fff; width: 780px;
+font-size: 2rem; padding: .6rem;
+}
+@keyframes slidy {
+0% { left: 0%; }
+40% { left: 0%; }
+50% { left: -100%; }
+90% { left: -100%; }
+100% { left: 0%; }
 }
