@@ -3,14 +3,14 @@
 		<?php 
 			include 'php/nav.php'; 
 			include 'php/roomview.php';
-			include 'php/bookings.php'; 
+			include 'php/booking.php'; 
 		?>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Hotel Borgmestergaarden - Middelfart Byferie, ferielejligheder, m&oslash;decenter</title>
 	</head>
 	<body> 
 		<header id="banner" class="body">
-			<?php echo GetNav($_GET["type"] + 1) ?>
+			<?php echo GetNav($_GET["type"]) ?>
 		</header>
 		<center>
 			<section id="content" class="body">
@@ -19,14 +19,13 @@
 		</center>
 		<div class="content">
 			<aside class="column left">
-				<?php echo GetPreviews(); ?>
+				<?php echo GetPreviews($_GET["type"]); ?>
 			</aside>
 			<aside class="column centerT">
-				<img src="graphics/sample01.jpg" width="710" height="351" alt>
+				<?php echo GetRoomMainPic($_GET["id"], $_GET["p"]); ?>
 			<aside>
 			<aside class="column centerB">
-				<img src="graphics/sample01.jpg" width="305" height="175" alt>
-				<img src="graphics/sample02.jpg" width="305" height="175" alt>
+				<?php echo GetRoomPics($_GET["id"]); ?>
 			<aside>
 		</div>
 	</body>
