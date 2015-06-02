@@ -1,21 +1,18 @@
 <html lang="da">
 	<head>
+		<?php 
+			include 'php/slider.php'; 
+			include 'php/nav.php';
+		?>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Hotel Borgmestergaarden - Middelfart Byferie, ferielejligheder, m&oslash;decenter</title>
 	</head>
 	<body>
 		<header id="banner" class="body">
-		  <nav><ul>
-			<li><a href="home.html">Forside</a></li>
-			<li><a href="apartments.html">Lejligheder</a></li>
-			<li><a href="rooms.html">V&aeligrelser</a></li>
-			<li><a href="meetingsrooms.html">M&oslashdelokaler</a></li>
-			<li><a href="info.html">Info</a></li>
-			<li><a href="links.html">Links</a></li>
-			<li class="active"><a href="contact.html">Kontakt</a></li>
-		  </ul></nav> 
+			<?php echo GetNav(6); ?>
 		</header>
 		<center>
+			<p>&nbsp;</p>
 			<h3><b>Kontakt os</b></h3>
 			<p>Tlf.: (+45) 9320 5500</p>
 			<p>E-mail:&nbsp; hotel@borgmestergaarden.dk</p>

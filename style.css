@@ -123,14 +123,14 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     font-size: 1.143em;
     height: 40px;
     line-height: 30px;
-    margin: 0 auto 2em auto;
+    margin: 0 auto 0 auto; /* 0 auto 2em auto; */
     padding: 0;
     text-align: center;
-    width: 800px;
+    width: 100%;
     
-    border-radius: 5px;
+    /*border-radius: 5px;
     -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    -webkit-border-radius: 5px;*/
   }
   
   #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
@@ -139,7 +139,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
   #banner nav a:link, #banner nav a:visited {
     color: #fff;
     display: inline-block;
-    height: 30px;
+    height: 30px; /* 30 */
     padding: 5px 1.5em;
     text-decoration: none;
   }
@@ -151,6 +151,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
   }
   
   #banner nav li:first-child a {
+	/*
     border-top-left-radius: 5px;
     -moz-border-radius-topleft: 5px;
     -webkit-border-top-left-radius: 5px;
@@ -158,6 +159,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     border-bottom-left-radius: 5px;
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
+  */
   }
  
   section {
@@ -169,8 +171,8 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
   aside {
     width:800px;
     float:center;
-    padding:10px;
-	text-align:center;
+    padding:0px;
+	text-align:left;
 }
 /* Slider */
 div#captioned-gallery { width: 100%; overflow: hidden; padding-bottom: 1.0rem; }
@@ -197,4 +199,40 @@ font-size: 2rem; padding: .6rem;
 50% { left: -100%; }
 90% { left: -100%; }
 100% { left: 0%; }
+}
+/* Wrapper */
+.content {
+	position: absolute; top: 30%; left: 50%;
+	width: 800px; height: 736px;
+	margin-left: -401px; margin-top: -251px;
+}
+
+/* Colums */
+.column {
+	position: absolute; top: 0; bottom: 0;
+	width: 180px;
+	padding: 10px;
+	background-color: #E7E7E7
+}
+
+.column.left {
+	left: 0;
+}
+.column.left img {
+	margin-bottom: 5px;
+}
+.column.centerT {
+	left: 215px; right: 200px;
+	text-align: center;
+	width: 715px; height: 351px;
+}
+.column.centerB {
+	right: 0px; top: 382px;
+	text-align: center;
+	width: 715px; height: 175px;
+}
+.column.centerB img {
+	left: 0px;
+	float: left;
+	margin-right: 5px;
 }

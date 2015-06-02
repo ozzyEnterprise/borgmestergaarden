@@ -1,5 +1,9 @@
 <html lang="da">
 	<head>
+		<?php 
+			include 'php/slider.php'; 
+			include 'php/nav.php';
+		?>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<META NAME="Title" Content="Hotel Borgmestergaarden - Middelfart Byferie, ferielejligheder, m&oslash;decenter" />
 		<title>Hotel Borgmestergaarden - Middelfart Byferie, ferielejligheder, m&oslash;decenter</title>
@@ -13,33 +17,16 @@
 	</head>
 	<body id="index" class="home">
 		<header id="banner" class="body">
-		  <nav><ul>
-			<li class="active"><a href="home.html">Forside</a></li>
-			<li><a href="apartments.html">Lejligheder</a></li>
-			<li><a href="rooms.html">V&aeligrelser</a></li>
-			<li><a href="meetingsrooms.html">M&oslashdelokaler</a></li>
-			<li><a href="info.html">Info</a></li>
-			<li><a href="links.html">Links</a></li>
-			<li><a href="contact.html">Kontakt</a></li>
-		  </ul></nav> 
+			<?php echo GetNav(0); ?>
 		</header>
 		<center>
+			<aside>
+				<?php echo GetSlider(); ?>
+			</aside>
 			<section id="content" class="body">
-				<div id="captioned-gallery">
-					<figure class="slider">
-						<figure>
-							<img src="images/sample01.jpg" alt>
-							<figcaption>Velkommen til Hotel Borgmestergaarden og Middelfart Byferie</figcaption>
-						</figure>
-						<figure>
-							<img src="images/sample02.jpg" alt>
-							<figcaption>Velkommen til Hotel Borgmestergaarden og Middelfart Byferie</figcaption>
-						</figure>
-					</figure>
-				</div>
 				<!--<header><h3><b>Velkommen til Hotel Borgmestergaarden og Middelfart Byferie</b></h3></header>-->
 				<article>
-					<p><h3><b>Nyt hotel i Middelfart centrum med udsigt over Lilleb&aeliglt.</b></h3></p>
+					<h3><b>Nyt hotel i Middelfart centrum med udsigt over Lilleb&aeliglt.</b></h3>
 					<p>P&atilde byens havnepromenade mellem Kultur&oslashen, g&atildegaden, torvet, Middelfart Kirke og Gammel Havn ligger Hotel Borgmestergaarden. Den fredede ejendom fra 1842 er n&aelignsomt moderniseret og mod Havnegade er opf&oslashrt en ny bygning. Hotel- og ferielejligheder samt v&aeligrelser og suiter med i alt op til 45 sengepladser (eller 20 enkeltv&aeligrelser).</p>
 					<p>V&aeliglg mellem v&aeligrelser, suiter og lejligheder til 1-6 personer. De st&oslashrste lejligheder har 2 sovev&aeligrelser, 2 badev&aeligrelser, stue, TV og fuldt udstyret k&oslashkken samt udsigt til Lilleb&aeliglt.
 					- Pr&oslashv suiten med himmelseng og l&oslashvefodsbadekar
