@@ -2,7 +2,7 @@
 	<head>
 		<?php 
 			include 'php/nav.php'; 
-			include 'php/roombiew.php';
+			include 'php/roomview.php';
 			include 'php/bookings.php'; 
 		?>
 		<link rel="stylesheet" type="text/css" href="style.css">
