@@ -1,13 +1,13 @@
 <?php
 	function GetPreviews($roomType) {
-	
+
 		$sql = "SELECT
          roomType, id
          FROM
            rooms
 	     WHERE
-		   roomType = $roomType";
-		$result = runSql($sql); 
+		   roomType = " . $roomType . ";";
+		$result = runSql($sql);
 		if(!$result) return var_dump($result);
 		$linklist = array();
 		$selectedPics = array();
@@ -23,45 +23,45 @@
 			$path = "graphics/roompics/" . $picid . "/";
 			$findPictures = "*.{jpg,png,gif}";
 			$piclist = glob($path . $findPictures, GLOB_BRACE);
-			$link = "rooms.php?type=" . $type . "&id=" . $picid . "&p=0"; 
+			$link = "rooms.php?type=" . $type . "&id=" . $picid . "&p=0";
 			array_push($linklist, $link);
 			if($piclist != null) array_push($selectedPics, $piclist[0]);
 		}
 		$html = "";
 		for ($i = 0; $i < sizeof($selectedPics); $i++) {
 			$link = $linklist[$i];
-			$html = $html . "<a href='$link'><img src='" . $selectedPics[$i] . "' width='180' height='98' alt></a>";
+			$html = $html . "<a href='" . $link . "'><img src='" . $selectedPics[$i] . "' width='180' height='98' alt></a>";
 		}
 		return $html;
 	}
-	
+
 	function GetRoomPics($roomId) {
 		if($roomId == -1) return null;
 		$sql = "SELECT
          roomType, id
          FROM
            rooms
-         WHERE 
+         WHERE
            rooms.id = $roomId;";
-		$result = runSql($sql); 
+		$result = runSql($sql);
 		if(!$result) return var_dump($result);
 		$row = $result->fetch_assoc();
 		$id = $row["id"];
 		$type = $row["roomType"];
-		
+
 		$path = "graphics/roompics/" . $roomId . "/";
 		$findPictures = "*.{jpg,png,gif}";
 		$piclist = glob($path . $findPictures, GLOB_BRACE);
 		$html = "";
 		for ($i = 0; $i < sizeof($piclist); $i++) {
-			$link = "rooms.php?type=" . $type . "&id=" . $id . "&p=" . $i; 
-			$html = $html . "<a href='$link'><img src='" . $piclist[$i] . "' width='305' height='175' alt></a>";
+			$link = "rooms.php?type=" . $type . "&id=" . $id . "&p=" . $i;
+			$html = $html . "<a href='" . $link . "'><img src='" . $piclist[$i] . "' width='305' height='175' alt></a>";
 		}
 		return $html;
 	}
-	
+
 	function GetRoomMainPic($roomId, $index) {
-		if($roomId == -1) return null;
+		if($roomId == -1) return "<h1>Vælg venligst et rum i menuen til venstre</h1>";
 		$path = "graphics/roompics/" . $roomId . "/";
 		$findPictures = "*.{jpg,png,gif}";
 		$piclist = glob($path . $findPictures, GLOB_BRACE);

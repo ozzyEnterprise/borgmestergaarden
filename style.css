@@ -202,9 +202,9 @@ font-size: 2rem; padding: .6rem;
 }
 /* Wrapper */
 .content {
-	position: absolute; top: 30%; left: 50%;
+	position: relative;
 	width: 800px; height: 736px;
-	margin-left: -401px; margin-top: -251px;
+	margin-left: 0px; margin-top: 0px;
 }
 
 /* Colums */
