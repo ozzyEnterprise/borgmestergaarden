@@ -34,7 +34,7 @@ include 'php/checkuser.php';
      }
 
       if (isset($_POST['uploadPicture'])) {
-          include 'php/uploadpicture.php';
+          include '../php/uploadpicture.php';
       }
    ?>
 
